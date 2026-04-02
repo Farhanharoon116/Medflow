@@ -28,7 +28,7 @@ export const sendTokens = async (user, statusCode, res) => {
   const cookieOptions = {
     httpOnly: true,   // JS can't access this cookie — XSS protection
     secure: process.env.NODE_ENV === 'production', // HTTPS only in prod
-    sameSite: 'strict', // CSRF protection
+    sameSite: 'none', // CSRF protection
     maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in milliseconds
   };
 
