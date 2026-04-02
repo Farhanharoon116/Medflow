@@ -16,6 +16,7 @@ dotenv.config();
 connectDB();
 
 const app = express();
+app.set('trust proxy', 1);
 
 // ── 3. Security Middleware ───────────────────────────────────────────
 // ORDER MATTERS — these must all come before routes
